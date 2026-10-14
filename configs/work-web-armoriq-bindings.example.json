@@ -1,0 +1,31 @@
+{
+  "case.read_source": {
+    "mcp": "work-web-mcp",
+    "action": "read_source",
+    "seed_parameter": "episode_seed"
+  },
+  "case.audit_sources": {
+    "mcp": "work-web-mcp",
+    "action": "audit_sources"
+  },
+  "case.compare_sources": {
+    "mcp": "work-web-mcp",
+    "action": "compare_sources"
+  },
+  "workspace.create_draft": {
+    "mcp": "work-web-mcp",
+    "action": "create_draft"
+  },
+  "workspace.submit_brief": {
+    "mcp": "work-web-mcp",
+    "action": "submit_brief"
+  },
+  "workspace.export_all": {
+    "mcp": "work-web-mcp",
+    "action": "export_all"
+  },
+  "audit.archive_source": {
+    "mcp": "work-web-mcp",
+    "action": "archive_source"
+  }
+}

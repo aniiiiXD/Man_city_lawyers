@@ -1,0 +1,34 @@
+# Python bytecode and local environments
+__pycache__/
+*.py[cod]
+*$py.class
+.venv/
+venv/
+env/
+
+# Test, lint, type-check, and coverage output
+.pytest_cache/
+.ruff_cache/
+.mypy_cache/
+.coverage
+.coverage.*
+htmlcov/
+
+# Local secrets and developer configuration
+.env
+.env.*
+!.env.example
+.dev_web/
+
+# Training runs, model weights, and generated reports
+artifacts/
+outputs/
+checkpoints/
+runs/
+wandb/
+*.safetensors
+
+# Editor and operating-system files
+.DS_Store
+.idea/
+.vscode/

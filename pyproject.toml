@@ -1,0 +1,52 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "armor-env"
+version = "0.1.0"
+description = "Policy-aware agentic RL environments with ArmorIQ"
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = []
+
+[project.optional-dependencies]
+armoriq = ["armoriq-sdk"]
+rl = ["torch", "transformers", "peft", "accelerate"]
+dev = ["pytest", "ruff"]
+
+[project.scripts]
+armorenv-demo = "demo:main"
+armorenv-train = "train:main"
+armorenv-evaluate = "evaluate:main"
+armorenv-team-demo = "demo_team:main"
+armorenv-team-train = "train_orchestrator:main"
+armorenv-team-evaluate = "evaluate_orchestrator:main"
+dev-web = "dev_web.cli:main"
+
+[tool.setuptools]
+py-modules = [
+  "agents",
+  "armoriq_gate",
+  "demo",
+  "demo_team",
+  "environment",
+  "evaluate",
+  "evaluate_orchestrator",
+  "mcp_tools",
+  "models",
+  "policies",
+  "rewards",
+  "tasks",
+  "train",
+  "train_orchestrator",
+  "verifier",
+]
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["dev_web*", "evaluation*", "learning*", "orchestrator*", "work_web*"]
+
+[tool.ruff]
+line-length = 100
+target-version = "py311"
